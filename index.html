@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIDEO KROJAČNICA</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/VKT1.styles.css" asp-append-version="true" />
+</head>
+<body id="body" onload="provjeriJezik()">
+    <header id="head">
+        <nav id="navhead" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li>
+                            <img src="~/lib/slikefirma/logocrni.png" style="height:auto;width:auto;max-height:5vh;max-width:6vw;"/>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index"><h6 id="strHome">Home</h6></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Photography"><h6 id="strPhotography">Photography</h6></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Film&Video"><h6>Film & Video</h6></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Reels"><h6>Reels</h6></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/AboutUs"><h6 id="strAbout">About Us</h6></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/PriceList"><h6 id="strPricing">Pricing</h6></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Contact"><h6 id="strContact">Contact</h6></a>
+                        </li>
+                    </ul>
+                    <li class="nav-item" style="list-style-type: none;">
+                            <input type="button" id="promjeniJezikHR" onclick="promjeniJezikHR()" style="background-image:url('https://www.worldometers.info//img/flags/small/tn_hr-flag.gif'); background-size:contain;" />
+                        </li>
+                    <li class="nav-item" style="list-style-type: none;">
+                            <input type="button" id="promjeniJezikEN" onclick="promjeniJezikEN()" style="background-image:url('https://www.worldometers.info//img/flags/small/tn_uk-flag.gif'); background-size: contain;" />
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container1">
+        <main role="main" class="pb-3">
+            <div id="main">
+    <img id="logoindex" src="lib/slikefirma/logobijeli.png"></img>
+<section class="showcase">
+        <div class="video-container">
+            <video controls muted autoplay loop>
+                <source src="lib/videoFirma/promoVideoIndexLoop.mp4" type="video/mp4" >
+            </video>     
+        </div>
+         
+</section>  
+</div>
+
+<div id="lazy1" class="parwedphoto1">
+</div>
+<div class="parwedphoto1cont">
+    <div class="indexcardcont">
+        <h4 id="i1">Wedding Photos</h4>
+        <h5 id="j1">Wedding photo gallery</h5>
+        <br />
+        <button id="indexwedphobtn" onclick="naVjencanjaFoto()">Open Gallery</button>
+        <br />
+        <p> </p>
+    </div>
+</div>
+
+<div id="lazy2" class="parwedphoto2">
+</div>
+<div class="parwedphoto2cont">
+    <div class="indexcardcont">
+        <h4 id="i2">Family Photos</h4>
+        <h5 id="j2">Family photo gallery</h5>
+        <br />
+        <button id="indexfamphobtn" onclick="naFamilyFoto()">Open Gallery</button>
+    </div>
+</div>
+
+
+<div id="lazy3" class="parwedphoto3">
+</div>
+<div class="parwedphoto3cont">
+    <div class="indexcardcont">
+        <h4 id="i3">Promotional Photos</h4>
+        <h5 id="j3">Promotional photo gallery</h5>
+        <br />
+        <button id="indexprophobtn" onclick="naPromoFoto()">Open Gallery</button>
+    </div>
+</div>
+
+
+<div class="parwedphoto4">
+</div>
+<div class="parwedphoto4cont">
+    <div class="indexcardcont">
+        <h4 id="i4">Studio Photos</h4>
+        <h5 id="j4">Studio photo gallery</h5>
+        <br />
+        <button id="indexstuvidbtn" onclick="naStudioFoto()">Open Gallery</button>
+    </div>
+</div>
+
+
+<div class="parwedphoto5">
+</div>
+<div class="parwedphoto5cont">
+    <div class="indexcardcont">
+        <h4 id="i5">Wedding Videos</h4>
+        <h5 id="j5">Wedding video gallery</h5>
+        <br />
+        <button id="indexwedvidbtn" onclick="naVjencanjaVideo()">Open Gallery</button>
+    </div>
+</div>
+
+
+<div class="parwedphoto6">
+</div>
+<div class="parwedphoto6cont">
+    <div class="indexcardcont">
+        <h4 id="i6">Promotional Videos</h4>
+        <h5 id="j6">Promotional video gallery</h5>
+        <br />
+        <button id="indexpromophotobtn" onclick="naPromoVideo()">Open Gallery</button>
+    </div>
+</div>
+
+
+<div class="parwedphoto7">
+</div>
+<div class="parwedphoto7cont">
+    <div class="indexcardcont">
+        <h4 id="i7">Video Reels</h4>
+        <h5 id="j7">Video reels gallery</h5>
+        <br />
+        <button id="indexreelsbtn" onclick="naReelsVideo()">Open Gallery</button>
+    </div>
+</div>
+
+
+<div class="parwedphoto8">
+</div>
+<div class="parwedphoto8cont">
+    <div class="indexcardcont">
+        <h4 id="i8">Prices</h4>
+        <h5 id="j8">Our pricing for the current year</h5>
+        <br />
+        <button id="indexpricebtn" onclick="naPrices()">Check Prices</button>
+    </div>
+</div>
+
+
+<div class="parwedphoto9">
+</div>
+<div class="parwedphoto9cont">
+    <div class="indexcardcont">
+        <h4 id="i9">Contact</h4>
+        <h5 id="j9">Any questions? Reach out and we'll be happy to reply</h5>
+        <br />
+        <button id="indexcontactbtn" onclick="upit()">Contact</button>
+    </div>
+</div>
+
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
+<footer id="footer" class="border-top footer text-muted" style="z-index:-1;">
+    <div class="container2">
+        &copy; <script>document.write(new Date().getFullYear());</script> - Video Krojacnica
+    </div>
+</footer>
