@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VIDEO KROJAČNICA</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/VKT1.styles.css" asp-append-version="true" />
 </head>
@@ -19,7 +19,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li>
-                            <img src="~/lib/slikefirma/logocrni.png" style="height:auto;width:auto;max-height:5vh;max-width:6vw;"/>
+                            <img src="~/slikefirma/logocrni.png" style="height:auto;width:auto;max-height:5vh;max-width:6vw;"/>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index"><h6 id="strHome">Home</h6></a>
@@ -57,11 +57,11 @@
     <div class="container1">
         <main role="main" class="pb-3">
             <div id="main">
-    <img id="logoindex" src="lib/slikefirma/logobijeli.png"></img>
+    <img id="logoindex" src="slikefirma/logobijeli.png"></img>
 <section class="showcase">
         <div class="video-container">
             <video controls muted autoplay loop>
-                <source src="lib/videoFirma/promoVideoIndexLoop.mp4" type="video/mp4" >
+                <source src="https://videokrojacnica.runasp.net/lib/videoFirma/promoVideoIndexLoop.mp4" >
             </video>     
         </div>
          
@@ -179,8 +179,8 @@
         </main>
     </div>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/jquery/dist/jquery.min.js"></script>
+    <script src="~/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
